@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34f4bcdcfcb22a43abd48bd2d75a902, type: 3}
   m_Name: BrightTheme
   m_EditorClassIdentifier: Assembly-CSharp::ShowroomLightingPreset
-  ambientSky: {r: 0.85, g: 0.88, b: 0.9, a: 1}
-  ambientEquator: {r: 0.65, g: 0.68, b: 0.66, a: 1}
-  ambientGround: {r: 0.4, g: 0.39, b: 0.35, a: 1}
-  keyColor: {r: 1, g: 0.96, b: 0.89, a: 1}
-  ceilingLightColor: {r: 1, g: 0.95, b: 0.85, a: 1}
-  keyIntensity: 0.72
-  shadowStrength: 0.68
-  ceilingLightIntensity: 1
-  ceilingLightRange: 12
-  keyRotation: {x: 0.40821794, y: -0.23456973, z: 0.10938166, w: 0.8754261}
+  ambientSky: {r: 1.05, g: 1.12, b: 1.25, a: 1}
+  ambientEquator: {r: 1, g: 1, b: 0.98, a: 1}
+  ambientGround: {r: 0.8, g: 0.74, b: 0.66, a: 1}
+  keyColor: {r: 1, g: 1, b: 1, a: 1}
+  ceilingLightColor: {r: 1, g: 0.98, b: 0.95, a: 1}
+  keyIntensity: 0.4
+  shadowStrength: 0.4
+  ceilingLightIntensity: 2.6
+  ceilingLightRange: 17
+  keyRotation: {x: -0.6709885, y: 0.1861789, z: -0.17979088, w: -0.69482887}
   keyUseColorTemperature: 1
-  keyColorTemperature: 3900
+  keyColorTemperature: 5200
   shadowBias: 0.05
   shadowNormalBias: 0.4
-  reflectionIntensity: 0.6
+  reflectionIntensity: 1
   probeIntensity: 0.85
   volumeProfile: {fileID: 11400000, guid: a08b8da86463a124c9176c0ed8b7401a, type: 2}
   ceilingMaterials:
@@ -35,3 +35,4 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 20477f00224cf0f40946356160d94e6e, type: 2}
   - {fileID: 2100000, guid: 68d58ff9f8eef744ba9c3a6d053c5bab, type: 2}
   - {fileID: 2100000, guid: 9a828136e5136104c9e0c54fc73d27fa, type: 2}
+  - {fileID: 2100000, guid: 52248d9934aa7e74ca353237d35260f3, type: 2}

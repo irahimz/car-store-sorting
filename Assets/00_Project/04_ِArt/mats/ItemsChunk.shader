@@ -1,4 +1,4 @@
-// Merged item chunks: palette texture lit by probe lighting baked into vertex colors.
+// Merged item chunks: palette texture lit by probe lighting baked into vertex colors, plus glow.
 Shader "Template/Items Chunk"
 {
     Properties
@@ -6,6 +6,8 @@ Shader "Template/Items Chunk"
         [MainTexture] _BaseMap("Palette", 2D) = "white" {}
         [MainColor] _BaseColor("Color", Color) = (1, 1, 1, 1)
         _LightScale("Light Scale", Float) = 2 // vertex color stores light / scale
+        _EmissionMap("Emission", 2D) = "white" {}
+        [HDR] _EmissionColor("Emission Color", Color) = (0, 0, 0, 0) // black = no glow
     }
 
     SubShader
@@ -18,11 +20,13 @@ Shader "Template/Items Chunk"
         CBUFFER_START(UnityPerMaterial)
             float4 _BaseMap_ST;
             half4 _BaseColor;
+            half4 _EmissionColor;
             half _LightScale;
         CBUFFER_END
 
         TEXTURE2D(_BaseMap);
         SAMPLER(sampler_BaseMap);
+        TEXTURE2D(_EmissionMap);
         ENDHLSL
 
         Pass
@@ -63,7 +67,8 @@ Shader "Template/Items Chunk"
             half4 Frag(Varyings input) : SV_Target
             {
                 half3 albedo = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, input.uv).rgb * _BaseColor.rgb;
-                half3 color = MixFog(albedo * input.light, input.fogFactor);
+                half3 glow = SAMPLE_TEXTURE2D(_EmissionMap, sampler_BaseMap, input.uv).rgb * _EmissionColor.rgb;
+                half3 color = MixFog(albedo * input.light + glow, input.fogFactor);
                 return half4(color, 1);
             }
             ENDHLSL

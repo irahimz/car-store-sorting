@@ -140,8 +140,11 @@ public static class SharedOutline
         combined.lodCount = 1;
         combined.subMeshCount = 1;
         combined.SetIndices(indices, MeshTopology.Triangles, 0, false);
-        combined.lodCount = source.lodCount;
-        combined.SetLods(ranges.ToArray(), 0, MeshUpdateFlags.Default);
+        if (source.lodCount > 1) // Unity refuses SetLods on a single-LOD mesh
+        {
+            combined.lodCount = source.lodCount;
+            combined.SetLods(ranges.ToArray(), 0, MeshUpdateFlags.Default);
+        }
         combined.bounds = source.bounds;
         OutlineMeshes[source] = combined;
         return combined;
@@ -243,7 +246,8 @@ public static class SharedOutline
             {
                 Entry entry = pair.Value;
                 if (entry.Target == null || !entry.Target.gameObject.activeInHierarchy ||
-                    entry.SourceRenderer != null && !entry.SourceRenderer.enabled)
+                    entry.SourceRenderer != null && !entry.SourceRenderer.enabled &&
+                    !ItemChunkRenderer.IsMerged(entry.SourceRenderer)) // a chunk cell still draws it
                     Stale.Add(pair.Key);
             }
 

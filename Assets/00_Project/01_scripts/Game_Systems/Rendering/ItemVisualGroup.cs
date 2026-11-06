@@ -14,6 +14,7 @@ public sealed class ItemVisualGroup : MonoBehaviour
     private object[] primaryKeys;
     private object[] secondaryKeys;
     private bool[] originalEnabled;
+    private bool[] merged; // drawn by an item chunk cell instead
     private bool far;
     private bool primaryVisible;
     private bool secondaryVisible;
@@ -42,6 +43,7 @@ public sealed class ItemVisualGroup : MonoBehaviour
         primaryKeys = new object[renderers.Length];
         secondaryKeys = new object[renderers.Length];
         originalEnabled = new bool[renderers.Length];
+        merged = new bool[renderers.Length];
         for (int i = 0; i < renderers.Length; i++)
         {
             primaryKeys[i] = new object();
@@ -62,8 +64,36 @@ public sealed class ItemVisualGroup : MonoBehaviour
         EnsureCache();
         if (far == value) return;
         far = value;
+        for (int i = 0; i < renderers.Length; i++) ApplyVisibility(i);
+    }
+
+    /// <summary> Authored-visible, active renderers the item chunk system may merge. </summary>
+    internal MeshRenderer[] MergeCandidates()
+    {
+        EnsureCache();
+        var result = new List<MeshRenderer>(renderers.Length);
         for (int i = 0; i < renderers.Length; i++)
-            if (renderers[i] != null) renderers[i].enabled = !far && originalEnabled[i];
+            if (renderers[i] != null && originalEnabled[i] && renderers[i].gameObject.activeInHierarchy)
+                result.Add(renderers[i]);
+        return result.ToArray();
+    }
+
+    /// <summary> Hides parts a chunk cell draws, or shows them again. </summary>
+    internal void SetMerged(MeshRenderer[] parts, bool value)
+    {
+        EnsureCache();
+        foreach (MeshRenderer part in parts)
+        {
+            int i = System.Array.IndexOf(renderers, part);
+            if (i < 0) continue;
+            merged[i] = value;
+            ApplyVisibility(i);
+        }
+    }
+
+    private void ApplyVisibility(int i)
+    {
+        if (renderers[i] != null) renderers[i].enabled = originalEnabled[i] && !far && !merged[i];
     }
 
     public void ShowPrimary(Color color, float width = SharedOutline.Width) => Show(true, color, width);
@@ -81,7 +111,7 @@ public sealed class ItemVisualGroup : MonoBehaviour
         for (int i = 0; i < renderers.Length; i++)
         {
             MeshRenderer renderer = renderers[i];
-            if (renderer != null && renderer.enabled && renderer.gameObject.activeInHierarchy)
+            if (renderer != null && (renderer.enabled || merged[i]) && renderer.gameObject.activeInHierarchy)
                 SharedOutline.Show(keys[i], renderer, color, width);
             else
                 SharedOutline.Hide(keys[i]);

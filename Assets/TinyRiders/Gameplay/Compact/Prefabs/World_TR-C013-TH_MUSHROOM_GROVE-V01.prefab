@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3000596262815953976}
   - component: {fileID: 3148475639349683756}
   - component: {fileID: 1695143864559542512}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: World_TR-C013-TH_MUSHROOM_GROVE-V01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5898760306088283504}
+  - {fileID: 8860269124700141704}
   - {fileID: 5410976961735332314}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e8a651a9acbaf438f6d5edd1bf957b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemVisualGroup
-  visualRoot: {fileID: 5898760306088283504}
+  visualRoot: {fileID: 8860269124700141704}
 --- !u!114 &6091422914623460320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,8 +89,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396459502890614542}
   serializedVersion: 5
-  m_Mass: 0.3
-  m_LinearDamping: 0.6
+  m_Mass: 0.1
+  m_LinearDamping: 0.1
   m_AngularDamping: 4
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -141,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5410976961735332314}
   - component: {fileID: 6007344129306559786}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Accessory Pick Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15079999, y: 0.09764961, z: 0.15312596}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &2656810615834821640
+--- !u!1001 &6474396405524395047
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -192,161 +192,161 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7756104448032236552}
     m_Modifications:
-    - target: {fileID: 275778104723459100, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 258817056358362011, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 711415138213540560, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Name
-      value: TR-C013-TH_MUSHROOM_GROVE-V01
-      objectReference: {fileID: 0}
-    - target: {fileID: 711415138213540560, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 990125579434564011, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1007086626790948396, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 1281958981799834159, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1264997897399621032, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 1512337662106750543, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1493124778444417480, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2248514822339012688, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 2265335167623466967, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2273435885066329362, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 2290256195473324693, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2321174681677620296, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 2337995028524450767, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2749287887170411470, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986671459977879333, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3471259174596793810, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3546164890871645271, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087896450413549287, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4685434302296911786, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5102455346082810492, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552272423074781761, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608921371514620741, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774792392029094957, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7157639783083372184, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7712258324648946466, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7864361185143628076, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.14258763
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.14258763
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.14258763
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0000001937151
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.014714747
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.022679597
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8839911596241118538, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2940131211993086017, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 9134852121814427138, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
+    - target: {fileID: 2969714773154166946, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044807055724608238, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488075121317016149, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3563121543864116176, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241241377999757327, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Name
+      value: TR-C013-TH_MUSHROOM_GROVE-V01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241241377999757327, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702395350097610797, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569229110485712326, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625878056778067138, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791612737844405162, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138567637498415391, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190504583883014819, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729074238064020645, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856872679477396173, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089690540553300339, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115780010604151173, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
---- !u!4 &5898760306088283504 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+--- !u!4 &8860269124700141704 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8431433475722267000, guid: 1870dcbb6e94f7f46b3d35af75d6f1b7, type: 3}
-  m_PrefabInstance: {fileID: 2656810615834821640}
+  m_CorrespondingSourceObject: {fileID: 2534491851491380399, guid: be6cbb39ee40ad54283d1b0a7d49f2a0, type: 3}
+  m_PrefabInstance: {fileID: 6474396405524395047}
   m_PrefabAsset: {fileID: 0}

@@ -542,13 +542,6 @@ namespace KinematicCharacterController.Examples
 
         public void ProcessHitStabilityReport(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint, Vector3 atCharacterPosition, Quaternion atCharacterRotation, ref HitStabilityReport hitStabilityReport)
         {
-            // Loose stock must never become a step or a moving ground platform.
-            if (hitCollider.attachedRigidbody != null &&
-                hitCollider.attachedRigidbody.TryGetComponent<WorldItemBase>(out _))
-            {
-                hitStabilityReport.IsStable = false;
-                hitStabilityReport.ValidStepDetected = false;
-            }
         }
 
         protected void OnLanded()

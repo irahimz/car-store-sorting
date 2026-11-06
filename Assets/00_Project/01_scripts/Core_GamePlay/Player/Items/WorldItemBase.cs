@@ -290,10 +290,11 @@ public class WorldItemBase : MonoBehaviour, IInteractable, IHoverable
 
     private void RegisterChunk()
     {
-        if (_visualGroup != null) return; // nested multi-material cars stay individually rendered
         if (ChunkMember != null) return;
         bool atRest = Body == null || (Body.isKinematic && !ThrowControlled);
-        ChunkMember = ItemChunkRenderer.Register(_model, transform, atRest);
+        ChunkMember = _visualGroup != null
+            ? ItemChunkRenderer.Register(_visualGroup, transform, atRest) // nested car: every mergeable part
+            : ItemChunkRenderer.Register(_model, transform, atRest);
     }
 
     /// <summary> Swap-removes this item from the registry. </summary>

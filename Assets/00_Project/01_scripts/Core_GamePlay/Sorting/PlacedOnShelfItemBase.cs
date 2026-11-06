@@ -83,8 +83,10 @@ public class PlacedOnShelfItemBase : MonoBehaviour, IInteractable, IHoverable
     internal void Settle()
     {
         IsSettled = true;
-        if (_visualGroup == null && _chunk == null && !_isWrong)
-            _chunk = ItemChunkRenderer.Register(_model, transform, false);
+        if (_chunk == null && !_isWrong)
+            _chunk = _visualGroup != null
+                ? ItemChunkRenderer.Register(_visualGroup, transform, false)
+                : ItemChunkRenderer.Register(_model, transform, false);
     }
 
     /// <summary> Tints the item wrong; with flash it also plays the buzz. </summary>
@@ -93,7 +95,7 @@ public class PlacedOnShelfItemBase : MonoBehaviour, IInteractable, IHoverable
         _isWrong = true;
         ItemChunkRenderer.Unregister(_chunk); // merged cells can't show a per-item tint
         _chunk = null;
-        if (_model != null) _model.enabled = true;
+        if (_visualGroup == null && _model != null) _model.enabled = true; // groups restore their own
 
         _wrongFeedback.PlayTint(flash);
         if (flash) _wrongFeedback.PlaySound();

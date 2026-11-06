@@ -29,8 +29,8 @@ namespace TinyRiders
 
         public static void Configure(Rigidbody body)
         {
-            body.mass = .3f;
-            body.linearDamping = .6f;
+            body.mass = 1f;
+            body.linearDamping = 3f;
             body.angularDamping = 4f;
             body.solverIterations = 12;
             body.solverVelocityIterations = 4;

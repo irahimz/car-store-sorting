@@ -41,8 +41,11 @@ public static class ItemDetail
         }
     }
 
-    /// <summary> Mesh LOD index for the current level; 0 without baked LODs. </summary>
-    public static int Lod => LodSet != null && LodSet.Count > 0 ? (int)Current : 0;
+    /// <summary> Master LOD switch; false keeps every item mesh on LOD0. </summary>
+    public const bool LodEnabled = false;
+
+    /// <summary> Mesh LOD index for the current level; 0 without baked LODs or when disabled. </summary>
+    public static int Lod => LodEnabled && LodSet != null && LodSet.Count > 0 ? (int)Current : 0;
 
     /// <summary> Baked item LODs from Resources, or null if not baked. </summary>
     public static ItemLodSet LodSet
